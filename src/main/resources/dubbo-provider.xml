@@ -11,7 +11,14 @@
     <dubbo:application name="hello-world-app" />
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
-    <dubbo:registry address="multicast://224.5.6.7:1234" />
+    <!-- 组播地址段：224.0.0.0 - 239.255.255.255 -->
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234" />-->
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://10.236.40.159:2181" />
+
+    <!-- 使用redis注册中心暴露服务地址，另外一种写法 -->
+    <dubbo:registry protocol="redis" address="10.236.40.159" port="6379" />
 
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880" />
