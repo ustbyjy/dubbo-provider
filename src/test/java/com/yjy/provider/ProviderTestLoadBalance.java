@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MultiProvider {
-    private static Logger logger = LoggerFactory.getLogger(MultiProvider.class);
+public class ProviderTestLoadBalance {
+    private static Logger logger = LoggerFactory.getLogger(ProviderTestLoadBalance.class);
 
     public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext(new String[]{"classpath:dubbo-provider.xml"});
