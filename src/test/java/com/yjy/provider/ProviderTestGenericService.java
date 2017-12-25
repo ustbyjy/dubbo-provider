@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ProviderTestGenericService {
-    private static Logger logger = LoggerFactory.getLogger(ProviderTestLoadBalance.class);
+    private static Logger logger = LoggerFactory.getLogger(ProviderTestGenericService.class);
 
     public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:dubbo-provider-generic.xml"});
